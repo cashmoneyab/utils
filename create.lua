@@ -1,8 +1,8 @@
 --!optimize 1
-local Instance_new 	= Instance.new;
+local Instance_new = Instance.new;
 local string_format = string.format;
 
-local tostring= tostring;
+local tostring = tostring;
 local warn = warn;
 local pcall = pcall;
 local pairs = pairs;
