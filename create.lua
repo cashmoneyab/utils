@@ -27,7 +27,7 @@ local forbidden = lookupify{"attributes", "Attributes"}
 
 local function setAttributes(attributes, object)
 	if not attributes then return end;
-	
+
 	for name, value in pairs(attributes) do
 		local success = pcall(object.SetAttribute, object, name, value)
 		if not success then
@@ -88,6 +88,8 @@ local function setupInstance(instanceData)
 end
 
 function CreateInstance(instanceData, listDescendants, parent)
+	if not next(instanceData) then return end
+	
 	local object = setupInstance(instanceData)
 	local descendants = {}
 
@@ -139,4 +141,3 @@ return setmetatable({
 	CreateInstance = CreateInstance,	
 	RemoveInstances = removeInstances,
 }, {__call = function(self, ...) return CreateInstance(...) end})
-
