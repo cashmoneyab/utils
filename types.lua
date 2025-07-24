@@ -20,7 +20,7 @@ function lerpFunctions.Vector2(alpha, c, c2)
 	return c:Lerp(c2, alpha)
 end
 
-function lerpFunctions.UDim2(alpha, c : UDim2, c2 : UDim2)
+function lerpFunctions.UDim2(alpha, c, c2)
 	local lerp = lerpFunctions.number;
 	return 
 		UDim2.new(
@@ -32,7 +32,7 @@ function lerpFunctions.UDim2(alpha, c : UDim2, c2 : UDim2)
 		);
 end
 
-function lerpFunctions.UDim(alpha, c : UDim, c2 : UDim)
+function lerpFunctions.UDim(alpha, c, c2)
 	local lerp = lerpFunctions.number;
 	return 
 		UDim.new(
@@ -41,7 +41,7 @@ function lerpFunctions.UDim(alpha, c : UDim, c2 : UDim)
 		);
 end
 
-function lerpFunctions.Color3(alpha, c : Color3, c2 : Color3)
+function lerpFunctions.Color3(alpha, c, c2)
 	local lerp = lerpFunctions.number;
 	return 
 		Color3.new(
